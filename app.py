@@ -15,7 +15,7 @@ uploaded_file = st.file_uploader("Upload Shrimp Image", type=["jpg", "jpeg", "pn
 
 if uploaded_file is not None:
     img = Image.open(uploaded_file).convert("RGB")
-    st.image(img, caption="Uploaded Shrimp Image", use_column_width=True)
+    st.image(img, caption="Uploaded Shrimp Image", use_container_width=True)
 
     # Preprocess
     img = img.resize((224, 224))
